@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "3c1c4357-4a8c-474f-ac94-b4474efc615d",
+		"name": "ChequeConvertAmountToWordsTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestAPI 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cfa78387-2a3e-43dc-ad7d-1b6f7b7f903b",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"ONE THOUSAND TWO HUNDRED THIRTY-FOUR DOLLARS AND FIFTY-SIX CENTS\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=1234.56",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "1234.56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "909990f2-1e96-4ddf-86de-5a320207ce78",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"TWENTY-TWO CENTS ONLY\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=0.22",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "0.22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"ONE HUNDRED TWO DOLLARS AND THREE CENTS\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=102.03",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "102.03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"ONE DOLLAR AND TWO CENTS\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=1.021",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "1.021"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"ONE DOLLAR AND TWENTY-THREE CENTS\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=1.23987",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "1.23987"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI 6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"TWELVE DOLLARS AND EIGHTY-FIVE CENTS\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=00012.85",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "00012.85"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI Minus Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 400\"] = responseCode.code === 400;",
+							"tests[\"Body matches string\"] = responseBody.has(\"Input cannot be a negative number\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=-1234.56",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "-1234.56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI $ Input Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"ONE THOUSAND TWO HUNDRED THIRTY-FOUR DOLLARS AND FIFTY-SIX CENTS\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=$1234.56",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "$1234.56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI Zero Input Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 400\"] = responseCode.code === 400;",
+							"tests[\"Body matches string\"] = responseBody.has(\"Input cannot be Zero\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=0",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI Invalid Input Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 400\"] = responseCode.code === 400;",
+							"tests[\"Body matches string\"] = responseBody.has(\"Not a valid input\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=1034.56.9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "1034.56.9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI Non Number Input Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 400\"] = responseCode.code === 400;",
+							"tests[\"Body matches string\"] = responseBody.has(\"Input cannot contain anything other than numbers\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=1234.56W",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": "1234.56W"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI No Input",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4248ee86-3c02-426f-914d-e87f29aaa4c0",
+						"exec": [
+							"tests[\"Status code is 400\"] = responseCode.code === 400;",
+							"tests[\"Body matches string\"] = responseBody.has(\"No value was passed to the API\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/ChequeConverter/?ChequeValue=",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"ChequeConverter",
+						""
+					],
+					"query": [
+						{
+							"key": "ChequeValue",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
