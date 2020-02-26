@@ -103,7 +103,6 @@
   <ItemGroup>
     <Compile Include="Controllers\ChequeConverterController.cs" />
     <Compile Include="Logic\ChequeConvertToWords.cs" />
-    <Compile Include="Models\ChequeConversion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
