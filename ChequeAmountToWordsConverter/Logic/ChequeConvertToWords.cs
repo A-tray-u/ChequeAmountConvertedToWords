@@ -27,6 +27,11 @@ namespace ChequeAmountToWordsConverter.Logic
 
                 var numbers = number.Split('.').ToList();
 
+                if (number.Contains("-"))
+                {
+                    return ("ClientError", false, "", "Input cannot be a negative number");
+                }
+
                 // Check if input is actually a decimal.
                 if (numbers.Count() > 2)
                 {
@@ -44,12 +49,6 @@ namespace ChequeAmountToWordsConverter.Logic
                     {
                         return ("ClientError", false, "", "Input cannot contain anything other than numbers");
                     }
-                }
-
-                // Redunant due to number check above.
-                if (number.Contains("-"))
-                {
-                    return ("ClientError", false, "", "Input cannot be a negative number");
                 }
 
                 // Converting it to Cents then Converting it back to Dollars

@@ -11,7 +11,7 @@ namespace ChequeAmountToWordsConverter.Controllers
     public class ChequeConverterController : ApiController
     {
         [HttpGet]
-        [Route("{chequeValue}")]
+        [Route("{ChequeValue}")]
         public HttpResponseMessage Get(string chequeValue)
         {
             var logic = new Logic.ChequeConvertToWords();
