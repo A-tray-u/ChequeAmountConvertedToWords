@@ -14,6 +14,10 @@ namespace ChequeAmountToWordsConverter.Controllers
         [Route("{ChequeValue}")]
         public HttpResponseMessage Get(string chequeValue)
         {
+            if (String.IsNullOrEmpty(chequeValue))
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "No value was passed to the API");
+            }
             var logic = new Logic.ChequeConvertToWords();
 
             var result = logic.ChequeAmountToWords(chequeValue);
